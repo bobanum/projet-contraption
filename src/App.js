@@ -1,4 +1,5 @@
 /*jslint esnext:true, browser:true*/
+import Cat from "./Cat.js";
 /**
  * @module App
  */
@@ -7,8 +8,7 @@ export default class App {
 	 * Méthode principale. Sera typiquement appelée après le chargement de la page.
 	 */
 	static main() {
-		console.log("Je suis prêt");
-		document.getElementById("app").innerHTML = "La page est chargée";
+		Cat.main();
 	}
 	/**
 	 * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal

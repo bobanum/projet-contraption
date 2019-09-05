@@ -1,0 +1,26 @@
+.cat {
+    --largeur: 67px;
+    --hauteur: 59px;
+    --steps: 8;
+    position: absolute;
+    width: var(--largeur);
+    height: var(--hauteur);
+    background-image: url(../media/cat.png);
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(var(--steps));
+    /*animation-name: walk;*/
+    animation-duration: 500ms;
+}
+@keyframes walk {
+    0% {
+        background-position-x: 0px;
+        background-position-y: calc(-1 * var(--hauteur));
+    }
+    100% {
+        background-position-x: calc(-1 * var(--steps) * var(--largeur));
+        background-position-y: calc(-1 * var(--hauteur));
+    }
+}
